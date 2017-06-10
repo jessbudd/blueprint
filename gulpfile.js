@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-// var browserSync = require('browser-sync').create();
+var browserSync = require('browser-sync').create();
 var sourcemaps = require('gulp-sourcemaps');
 
 
@@ -8,7 +8,7 @@ var sourcemaps = require('gulp-sourcemaps');
 
 //compiles sass to css and adds sourcemaps
 gulp.task('sass', function() {
-     gulp.src('scss/*.scss')
+    return gulp.src('scss/*.scss')
         
         //create minified style.css file 
         .pipe(sourcemaps.init())
@@ -19,23 +19,22 @@ gulp.task('sass', function() {
             .pipe(gulp.dest('./'))
 
         //live reload
-        // .pipe(browserSync.reload({
-        //     stream: true
-        // }))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 //browserSync live reload
-// gulp.task('browserSync', function() {
-//     browserSync.init({
-//         proxy: {
-//             target: "http://www.blueprint.dev", //address of dev site 
-//         }
-//     })
-// });
+gulp.task('browserSync', function() {
+    browserSync.init({
+        proxy: {
+            target: "http://blueprint.dev" //address of dev site 
+        }
+    })
+});
 
 // watch files
-// gulp.task('watch', ['browserSync', 'sass'], function() {
-//     gulp.watch('**/*.scss', ['sass']);
-//     gulp.watch('*.php', browserSync.reload);
-//     gulp.watch('*/*.php', browserSync.reload);
-// });
+gulp.task('watch', ['browserSync', 'sass'], function() {
+    gulp.watch('**/*.scss', ['sass']);
+    gulp.watch('*.php', browserSync.reload);
+});
