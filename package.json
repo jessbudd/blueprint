@@ -1,5 +1,5 @@
 {
-  "name": "Gulp-Boilerplate",
+  "name": "blueprint",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,13 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "\u0016https://github.com/jessbudd/FFWD.git"
+    "url": "\u0016https://github.com/jessbudd/blueprint.git"
   },
   "author": "Jessica Budd",
   "license": "MIT",
-  "description": "Starter boilerplate for Gulp/Html/Sass project",
+  "description": "blueprint",
   "devDependencies": {
     "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
     "gulp-install": "^1.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0"
