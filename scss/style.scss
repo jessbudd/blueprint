@@ -1,0 +1,34 @@
+/*
+Theme Name: Child Theme Name
+Theme URI: https://fireflywebdesign.com.au
+Author: Jessica Budd
+Author URI: https://jessicabudd.com.au
+Template: GeneratePress
+Description: Child theme description
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:
+
+*/
+
+
+/*-------------------------------------
+#Variables
+---------------------------------------*/
+@import "variables";
+
+/*-------------------------------------
+#Layout, Header & Footer
+---------------------------------------*/
+@import "layout";
+
+/*-------------------------------------
+#Components
+---------------------------------------*/
+@import "components";
+
+/*-------------------------------------
+#Page Specific Styles
+---------------------------------------*/
+@import "pages";
